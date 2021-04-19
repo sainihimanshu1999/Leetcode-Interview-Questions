@@ -17,5 +17,25 @@ class Solution:
                 x.append(i)
                 continue
         return x
+
+
+'''
+Second soltuion
+'''
+
+def fizzBuzz(self,n):
+    words,nums = ['Fizz','Buzz'],[3,5]
+    result = []
+
+    for i in range(1,n+1):
+        curr = ''
+        for j in range(2):
+            if i%nums[j] == 0:
+                curr += words[j]
+        if not curr:
+            result.append(str(i))
+        else:
+            result.append(curr)
+    return result
             
             
